@@ -137,3 +137,17 @@ test('damageTest1', () => {
     defence: 10,
   });
 });
+
+test('damageTest2', () => {
+  const hero = new Zombie('Ivan', 'Zombie');
+  hero.health = 0;
+  hero.damage(10);
+  expect(hero).toEqual({
+    name: 'Ivan',
+    type: 'Zombie',
+    health: 0,
+    level: 1,
+    attack: 40,
+    defence: 10,
+  });
+});
